@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Typing Athlete</title>
+
+<style>
+body{
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial;
+}
+
+.box{
+    background:#1e293b;
+    padding:30px;
+    border-radius:10px;
+    width:320px;
+}
+
+h2{
+    color:white;
+    text-align:center;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    background:#38bdf8;
+    border:none;
+    color:white;
+    cursor:pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+
+<h2>Typing Athlete</h2>
+
+<input
+type="text"
+id="name"
+placeholder="vishal">
+
+<button onclick="login()">
+Continue
+</button>
+
+</div>
+
+<script>
+function login(){
+
+let name=document.getElementById("name").value;
+
+localStorage.setItem("player",name);
+
+window.location.href="index.html";
+
+}
+</script>
+
+</body>
+</html>
