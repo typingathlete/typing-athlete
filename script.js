@@ -31,10 +31,17 @@ const wpm = document.getElementById("wpm");
 const accuracy = document.getElementById("accuracy");
 const errors = document.getElementById("errors");
 
+let selectedTime = 60;
 let time = 60;
-let countdown;
+let countdown = null;
 let started = false;
+
 let currentText = "";
+let totalTyped = 0;
+let correctChars = 0;
+let incorrectChars = 0;
+let grossWPM = 0;
+let netWPM = 0;
 
 function loadQuote() {
   currentText = quotes[Math.floor(Math.random() * quotes.length)];
@@ -52,7 +59,8 @@ function loadQuote() {
 startBtn.addEventListener("click", () => {
   if (started) return;
 
-  time = parseInt(timeSelect.value);
+  selectedTime = parseInt(timeSelect.value);
+time = selectedTime;
 timer.innerText = time;
   started = true;
   input.disabled = false;
@@ -117,8 +125,16 @@ progressBar.style.width = progress + "%";
 });
 restartBtn.addEventListener("click", () => {
     clearInterval(countdown);
+    selectedTime = parseInt(timeSelect.value);
 
-    time = 60;
+totalTyped = 0;
+correctChars = 0;
+incorrectChars = 0;
+
+grossWPM = 0;
+netWPM = 0;
+
+   time = selectedTime;
     timer.innerText = time;
 
     started = false;
