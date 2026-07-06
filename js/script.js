@@ -111,17 +111,28 @@ progressBar.style.width = progress + "%";
 
   const totalTyped = input.value.length;
 
-  if (totalTyped > 0) {
-    const acc = Math.round(((totalTyped - errorCount) / totalTyped) * 100);
-    accuracy.innerText = acc + "%";
-  }
+correctChars = totalTyped - errorCount;
+incorrectChars = errorCount;
 
-  const elapsed = (60 - time) / 60;
+if (totalTyped > 0) {
+    const acc = (correctChars / totalTyped) * 100;
+    accuracy.innerText = Math.max(0, Math.round(acc)) + "%";
+} else {
+    accuracy.innerText = "100%";
+}
 
-  if (elapsed > 0) {
-    const words = input.value.trim().split(/\s+/).length;
-    wpm.innerText = Math.round(words / elapsed);
-  }
+ const elapsedSeconds = selectedTime - time;
+
+if (elapsedSeconds > 0) {
+
+    const elapsedMinutes = elapsedSeconds / 60;
+
+    const typedCharacters = input.value.length;
+
+    const grossWPM = (typedCharacters / 5) / elapsedMinutes;
+
+    wpm.innerText = Math.max(0, Math.round(grossWPM));
+}
 });
 restartBtn.addEventListener("click", () => {
     clearInterval(countdown);
