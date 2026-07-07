@@ -1,67 +1,261 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Typing Athlete</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Typing Athlete | Improve Speed & Accuracy</title>
+<meta name="description"
+content="Typing Athlete is a modern typing practice platform to improve typing speed, accuracy and consistency.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/home.css">
 </head>
-  <div id="resultPopup" class="popup">
-  <div class="popup-box">
-    <h2>🎉 Test Completed</h2>
 
-    <p>⚡ WPM: <span id="finalWpm">0</span></p>
-    <p>🎯 Accuracy: <span id="finalAccuracy">100%</span></p>
-    <p>❌ Errors: <span id="finalErrors">0</span></p>
-
-    <button id="closePopup">Close</button>
-  </div>
-  </div>
 <body>
 
-<header>
-  <h1>⌨️ Typing Athlete</h1>
-  <span id="playerName"></span>
-  <button id="themeBtn">🌙 Dark</button>
-</header>
+<header class="navbar" id="navbar">
 
-<div class="container">
+    <div class="logo">
 
-<div class="timer-select">
-  <label>Select Time:</label>
+    <div class="ta-logo">
+        <span class="t">T</span>
+        <span class="a">A</span>
+    </div>
 
-  <select id="timeSelect">
-    <option value="15">15 Seconds</option>
-    <option value="30">30 Seconds</option>
-    <option value="60" selected>60 Seconds</option>
-    <option value="120">120 Seconds</option>
-  </select>
-</div> 
-  <div class="stats">
-    <div>⏱ Time: <span id="timer">60</span></div>
-    <div>⚡ WPM: <span id="wpm">0</span></div>
-    <div>🎯 Accuracy: <span id="accuracy">100%</span></div>
-    <div>❌ Errors: <span id="errors">0</span></div>
-  </div>
-
- <div class="progress">
-    <div id="progressBar"></div>
- </div>
-  <div id="quote">
-    Click Start to begin...
-  </div>
-
-  <textarea
-    id="input"
-    placeholder="Type here..."
-    disabled>
-  </textarea>
-
-  <button id="startBtn">Start Test</button>
-  <button id="restartBtn">Restart</button>
+    <div class="brand-name">
+        <span>TYPING</span>
+        <span>ATHLETE</span>
+    </div>
 
 </div>
 
-<script src="js/script.js"></script>
+    <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="practice.html">Practice</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="leaderboard.html">Leaderboard</a>
+    </nav>
+
+    <a href="practice.html" class="start-btn">
+        Start Training
+    </a>
+
+</header>
+
+
+<section class="hero reveal">
+
+    <div class="hero-left">
+
+        <p class="tag">🚀 Next Generation Typing Platform</p>
+
+        <h1>
+            Train Faster.<br>
+            <span>Type Smarter.</span>
+        </h1>
+
+        <p class="description">
+            Improve your typing speed, accuracy and consistency with a modern
+            training platform designed for students, gamers and professionals.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="practice.html" class="hero-btn">
+                🚀 Start Training
+            </a>
+
+            <a href="#" class="secondary-btn">
+                📊 View Progress
+            </a>
+        </div>
+
+    </div>
+
+    <div class="hero-right">
+
+        <div class="keyboard-box">
+
+    <div class="circle"></div>
+
+    <div class="keyboard">
+
+        <div class="row">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="row">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="row">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="space"></div>
+
+    </div>
+
+</div>
+
+    </div>
+
+</section>
+
+<section class="stats reveal">
+    
+    <div class="stat-card">
+        <div class="stat-icon">⚡</div>
+        <h2>128+</h2>
+        <p>Best WPM</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon">🎯</div>
+        <h2>99%</h2>
+        <p>Accuracy</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon">🔥</div>
+        <h2>10K+</h2>
+        <p>Active Users</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon">🏆</div>
+        <h2>500K+</h2>
+        <p>Tests Completed</p>
+    </div>
+
+</section>
+
+<section class="features reveal">
+
+    <div class="section-title">
+        <h2>Why Choose <span>Typing Athlete?</span></h2>
+        <p>
+            Everything you need to improve your typing speed, accuracy and consistency.
+        </p>
+    </div>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Lightning Fast</h3>
+            <p>Practice with ultra-smooth typing tests designed for maximum speed improvement.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>High Accuracy</h3>
+            <p>Track every keystroke and improve your typing precision.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Advanced Analytics</h3>
+            <p>Monitor WPM, accuracy, errors and overall performance.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🏆</div>
+            <h3>Leaderboard</h3>
+            <p>Compete with other typists and climb the rankings.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🌙</div>
+            <h3>Dark Mode UI</h3>
+            <p>Modern futuristic interface designed for long practice sessions.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🎮</div>
+            <h3>Gamer Experience</h3>
+            <p>Designed especially for students, gamers and professionals.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer reveal">
+
+    <div class="footer-top">
+
+        <div class="footer-brand">
+
+            <div class="ta-logo">
+                <span class="t">T</span>
+                <span class="a">A</span>
+            </div>
+
+            <div class="brand-name">
+                <span>TYPING</span>
+                <span>ATHLETE</span>
+            </div>
+
+        </div>
+
+        <p>
+            Improve your typing speed, build consistency and become a true Typing Athlete.
+        </p>
+
+    </div>
+
+    <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="practice.html">Practice</a>
+        <a href="#">Analytics</a>
+        <a href="#">Leaderboard</a>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Typing Athlete • Made with ❤️ by Vishal
+    </div>
+
+</footer>
+
+<script>
+    
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 30) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll(){
+
+    reveals.forEach((element)=>{
+
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+
+        if(elementTop < windowHeight - 120){
+            element.classList.add("active");
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+revealOnScroll();
+
+</script>
+
+<script src="js/home.js"></script>
+
 </body>
 </html>

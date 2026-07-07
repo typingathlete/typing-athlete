@@ -1,0 +1,183 @@
+ *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+header{
+    background:#1e293b;
+    text-align:center;
+    padding:20px;
+}
+
+header h1{
+    color:#38bdf8;
+}
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:30px auto;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.stats div{
+    background:#1e293b;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    font-weight:bold;
+}
+
+#quote{
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    min-height:140px;
+    font-size:22px;
+    line-height:40px;
+    margin-bottom:20px;
+}
+
+textarea{
+    width:100%;
+    height:180px;
+    padding:15px;
+    font-size:20px;
+    border:none;
+    border-radius:10px;
+    resize:none;
+    outline:none;
+}
+
+button{
+    width:100%;
+    margin-top:20px;
+    padding:15px;
+    font-size:18px;
+    background:#38bdf8;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0ea5e9;
+}
+
+.correct{
+    color:#22c55e;
+}
+
+.incorrect{
+    color:#ef4444;
+}
+
+@media(max-width:700px){
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+#restartBtn{
+    width:100%;
+    margin-top:10px;
+    padding:15px;
+    font-size:18px;
+    background:#ef4444;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+#restartBtn:hover{
+    background:#dc2626;
+}
+.timer-select{
+    margin:20px 0;
+    text-align:center;
+}
+
+.timer-select label{
+    font-size:18px;
+    margin-right:10px;
+}
+
+.timer-select select{
+    padding:10px;
+    font-size:16px;
+    border-radius:8px;
+}
+.popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.7);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-box{
+    background:white;
+    color:black;
+    padding:30px;
+    border-radius:12px;
+    width:300px;
+    text-align:center;
+}
+
+.popup-box button{
+    margin-top:20px;
+    width:100%;
+}
+.light-mode{
+    background:#f4f4f4;
+    color:#111;
+}
+
+.light-mode header{
+    background:#ffffff;
+}
+
+.light-mode .stats div,
+.light-mode #quote{
+    background:#ffffff;
+    color:#111;
+}
+
+#themeBtn{
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#22c55e;
+    color:white;
+}
+.progress{
+    width:100%;
+    height:10px;
+    background:#334155;
+    border-radius:20px;
+    margin-bottom:15px;
+    overflow:hidden;
+}
+
+#progressBar{
+    width:0%;
+    height:100%;
+    background:#22c55e;
+    transition:0.2s;
+}
