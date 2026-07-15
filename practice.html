@@ -1,67 +1,212 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Typing Athlete</title>
-  <link rel="stylesheet" href="css/style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Typing Athlete | Practice</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/practice.css">
+
 </head>
-  <div id="resultPopup" class="popup">
-  <div class="popup-box">
-    <h2>🎉 Test Completed</h2>
 
-    <p>⚡ WPM: <span id="finalWpm">0</span></p>
-    <p>🎯 Accuracy: <span id="finalAccuracy">100%</span></p>
-    <p>❌ Errors: <span id="finalErrors">0</span></p>
-
-    <button id="closePopup">Close</button>
-  </div>
-  </div>
 <body>
 
-<header>
-  <h1>⌨️ Typing Athlete</h1>
-  <span id="playerName"></span>
-  <button id="themeBtn">🌙 Dark</button>
+<header class="navbar">
+
+    <div class="logo">
+
+        <div class="ta-logo">
+            <span class="t">T</span>
+            <span class="a">A</span>
+        </div>
+
+        <div class="brand-name">
+            <span>TYPING</span>
+            <span>ATHLETE</span>
+        </div>
+
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="practice.html" class="active">Practice</a>
+    </nav>
+
+    <button id="theme-toggle" class="theme-btn">
+    🌙
+    </button>
+
 </header>
 
-<div class="container">
+<main class="practice-container">
 
-<div class="timer-select">
-  <label>Select Time:</label>
+    <!-- Time Buttons -->
 
-  <select id="timeSelect">
-    <option value="15">15 Seconds</option>
-    <option value="30">30 Seconds</option>
-    <option value="60" selected>60 Seconds</option>
-    <option value="120">120 Seconds</option>
-  </select>
-</div> 
-  <div class="stats">
-    <div>⏱ Time: <span id="timer">60</span></div>
-    <div>⚡ WPM: <span id="wpm">0</span></div>
-    <div>🎯 Accuracy: <span id="accuracy">100%</span></div>
-    <div>❌ Errors: <span id="errors">0</span></div>
-  </div>
+    <div class="practice-settings">
 
- <div class="progress">
-    <div id="progressBar"></div>
- </div>
-  <div id="quote">
-    Click Start to begin...
-  </div>
+        <button class="time-btn active" data-time="15">15s</button>
+        <button class="time-btn" data-time="30">30s</button>
+        <button class="time-btn" data-time="60">60s</button>
+        <button class="time-btn" data-time="120">120s</button>
 
-  <textarea
-    id="input"
-    placeholder="Type here..."
-    disabled>
-  </textarea>
+    </div>
 
-  <button id="startBtn">Start Test</button>
-  <button id="restartBtn">Restart</button>
+    <!-- Stats -->
+
+    <div class="stats-bar">
+
+        <div class="stat-box">
+            <h3 id="timer">15</h3>
+            <p>Timer</p>
+        </div>
+
+        <div class="stat-box">
+            <h3 id="wpm">0</h3>
+            <p>WPM</p>
+        </div>
+
+        <div class="stat-box">
+            <h3 id="accuracy">100%</h3>
+            <p>Accuracy</p>
+        </div>
+
+        <div class="stat-box">
+            <h3 id="errors">0</h3>
+            <p>Errors</p>
+        </div>
+
+        <div class="stat-box">
+            <h3 id="best-wpm">0</h3>
+            <p>Best WPM</p>
+        </div>
+
+    </div>
+
+    <!-- Progress -->
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <!-- Typing -->
+
+    <div class="typing-box">
+        <p id="typing-text"></p>
+    </div>
+
+   <textarea
+   id="typing-input"
+   placeholder="Start typing here..."
+   spellcheck="false"></textarea>
+
+<!-- ==========================
+     Virtual Keyboard
+========================== -->
+
+<div class="keyboard" id="virtual-keyboard">
+
+    <div class="keyboard-row">
+        <div class="key">Q</div>
+        <div class="key">W</div>
+        <div class="key">E</div>
+        <div class="key">R</div>
+        <div class="key">T</div>
+        <div class="key">Y</div>
+        <div class="key">U</div>
+        <div class="key">I</div>
+        <div class="key">O</div>
+        <div class="key">P</div>
+    </div>
+
+    <div class="keyboard-row">
+        <div class="key">A</div>
+        <div class="key">S</div>
+        <div class="key">D</div>
+        <div class="key">F</div>
+        <div class="key">G</div>
+        <div class="key">H</div>
+        <div class="key">J</div>
+        <div class="key">K</div>
+        <div class="key">L</div>
+    </div>
+
+    <div class="keyboard-row">
+        <div class="key">Z</div>
+        <div class="key">X</div>
+        <div class="key">C</div>
+        <div class="key">V</div>
+        <div class="key">B</div>
+        <div class="key">N</div>
+        <div class="key">M</div>
+    </div>
+
+    <div class="keyboard-row">
+        <div class="key space-key">SPACE</div>
+    </div>
 
 </div>
 
-<script src="js/script.js"></script>
+<div class="action-buttons">
+
+    <button class="restart-btn" id="restart-btn">
+        🔄 Restart Test
+    </button>
+
+</div>
+
+<!-- Result Popup -->
+
+<div class="result-popup" id="result-popup">
+
+    <div class="result-card">
+
+        <h2>🎉 Test Complete</h2>
+
+        <div class="result-item">
+            <span>⚡ WPM</span>
+            <strong id="final-wpm">0</strong>
+        </div>
+
+        <div class="result-item">
+            <span>🎯 Accuracy</span>
+            <strong id="final-accuracy">100%</strong>
+        </div>
+
+        <div class="result-item">
+            <span>❌ Errors</span>
+            <strong id="final-errors">0</strong>
+        </div>
+
+        <button id="play-again">
+            🔄 Try Again
+        </button>
+
+    </div>
+
+</div>
+
+<!-- History -->
+
+<section class="history-section">
+
+    <h2>📊 Recent History</h2>
+
+    <div id="history-list"></div>
+
+</section>
+
+<!-- JS -->
+
+<script src="js/paragraphs.js"></script>
+<script src="js/practice.js"></script>
+
 </body>
 </html>
