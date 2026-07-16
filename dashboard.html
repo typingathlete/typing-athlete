@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Typing Athlete | Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <div class="ta-logo">
+            <span class="t">T</span>
+            <span class="a">A</span>
+        </div>
+
+        <div class="brand-name">
+            <span>TYPING</span>
+            <span>ATHLETE</span>
+        </div>
+
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="practice.html">Practice</a>
+
+        <a href="dashboard.html" class="active">Dashboard</a>
+
+    </nav>
+
+    <div class="user-box">
+
+        <button id="logout-btn">Logout</button>
+
+        <span id="welcome-user">
+            Welcome, Vishal 👋
+        </span>
+
+    </div>
+
+</header>
+
+<main class="dashboard">
+
+    <section class="hero">
+
+        <h1>Your Dashboard</h1>
+
+        <p>
+            Track your progress and become a Typing Athlete.
+        </p>
+
+    </section>
+
+    <section class="stats-grid">
+
+        <div class="card">
+
+            <h2 id="best-wpm">0</h2>
+
+            <p>Best WPM</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2 id="avg-wpm">0</h2>
+
+            <p>Average WPM</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2 id="accuracy">100%</h2>
+
+            <p>Best Accuracy</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2 id="tests">0</h2>
+
+            <p>Total Tests</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2 id="characters">0</h2>
+
+            <p>Total Characters</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2 id="level">Level 1 ⭐</h2>
+
+            <p>Current Level</p>
+
+        </div>
+
+    </section>
+
+    <section class="xp-box">
+
+        <div class="xp-header">
+
+            <span>XP Progress</span>
+
+            <span id="xp-text">0 / 100 XP</span>
+
+        </div>
+
+        <div class="xp-bar">
+
+            <div class="xp-fill" id="xp-fill"></div>
+
+        </div>
+
+    </section>
+
+    <section class="achievement-box">
+
+        <h2>🏆 Achievements</h2>
+
+        <div class="achievement-grid">
+
+            <div class="achievement">
+                🥇 First Test
+            </div>
+
+            <div class="achievement">
+                ⚡ 50 WPM
+            </div>
+
+            <div class="achievement">
+                🎯 95% Accuracy
+            </div>
+
+            <div class="achievement">
+                🔥 100 XP
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="action">
+
+        <a href="practice.html" class="practice-btn">
+
+            🚀 Start Practice
+
+        </a>
+
+    </section>
+
+</main>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

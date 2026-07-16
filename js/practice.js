@@ -2,12 +2,6 @@
 // ELEMENTS
 // =====================================
 
-const keySound = new Audio("sounds/key.mp3");
-const errorSound = new Audio("sounds/error.mp3");
-
-keySound.volume = 0.25;
-errorSound.volume = 0.35;
-
 const keyboard = document.getElementById("virtual-keyboard");
 const keys = document.querySelectorAll(".key");
 const timer = document.getElementById("timer");
@@ -50,6 +44,8 @@ let mistakes = 0;
 let totalCharactersTyped = 0;
 let totalCorrectCharacters = 0;
 let totalMistakes = 0;
+
+let userXP = Number(localStorage.getItem("userXP") || 0);
 
 // =====================================
 // BEST WPM
@@ -178,6 +174,25 @@ function showResult(){
     );
 
     loadHistory();
+    // ============================
+    // XP System
+    // ============================
+
+    let earnedXP = 20;
+
+    // Accuracy Bonus
+    if (Number(accuracy.textContent.replace("%", "")) >= 95) {
+        earnedXP += 15;
+    }
+
+    // WPM Bonus
+    if (Number(wpm.textContent) >= 60) {
+        earnedXP += 25;
+    }
+
+    userXP += earnedXP;
+
+    localStorage.setItem("userXP", userXP);
 
 }
 
@@ -259,9 +274,6 @@ input.addEventListener("input", () => {
 
             span.classList.add("correct");
 
-            keySound.currentTime = 0;
-            keySound.play();
-
         }
 
         else{
@@ -269,10 +281,6 @@ input.addEventListener("input", () => {
             span.classList.add("incorrect");
 
             mistakes++;
-
-            errorSound.currentTime = 0;
-            errorSound.play();
-
 
         }
 
@@ -354,6 +362,11 @@ input.addEventListener("input", () => {
 
     }
 
+    localStorage.setItem(
+        "totalCharactersTyped",
+         totalCharactersTyped
+    );
+
     updateExpectedKey();
 
 });
@@ -385,6 +398,8 @@ function resetTest(){
     errors.textContent = "0";
 
     resultPopup.classList.remove("show");
+
+    input.value = "";
 
     loadText();
 
@@ -562,38 +577,5 @@ input.addEventListener("focus", () => {
 
 keyboard.classList.remove("show");
 
-// ============================
-// Theme Toggle
-// ============================
 
-const themeToggle = document.getElementById("theme-toggle");
 
-const savedTheme = localStorage.getItem("theme");
-
-if(savedTheme === "light"){
-
-    document.body.classList.add("light");
-
-    themeToggle.textContent = "☀️";
-
-}
-
-themeToggle.addEventListener("click",()=>{
-
-    document.body.classList.toggle("light");
-
-    if(document.body.classList.contains("light")){
-
-        localStorage.setItem("theme","light");
-
-        themeToggle.textContent = "☀️";
-
-    }else{
-
-        localStorage.setItem("theme","dark");
-
-        themeToggle.textContent = "🌙";
-
-    }
-
-});

@@ -38,12 +38,19 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="practice.html" class="active">Practice</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="leaderboard.html">Leaderboard</a>
     </nav>
 
-    <button id="theme-toggle" class="theme-btn">
-    🌙
-    </button>
+    <div class="user-box">
 
+        <button id="logout-btn">
+        Logout
+        </button>
+
+        <span id="welcome-user"></span>
+
+    </div>
 </header>
 
 <main class="practice-container">
@@ -206,6 +213,7 @@
 <!-- JS -->
 
 <script src="js/paragraphs.js"></script>
+<script src="js/auth.js"></script>
 <script src="js/practice.js"></script>
 
 </body>
