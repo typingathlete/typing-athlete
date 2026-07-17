@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Typing Athlete | Leaderboard</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="css/leaderboard.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <div class="ta-logo">
+
+            <span class="t">T</span>
+            <span class="a">A</span>
+
+        </div>
+
+        <div class="brand-name">
+
+            <span>TYPING</span>
+            <span>ATHLETE</span>
+
+        </div>
+
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="practice.html">Practice</a>
+
+        <a href="dashboard.html">Dashboard</a>
+
+        <a href="leaderboard.html"
+        class="active">
+
+        Leaderboard
+
+        </a>
+
+    </nav>
+
+    <div class="user-box">
+
+        <button id="logout-btn">
+
+            Logout
+
+        </button>
+
+        <span id="welcome-user">
+
+            Welcome, Vishal 👋
+
+        </span>
+
+    </div>
+
+</header>
+
+<main class="leaderboard">
+
+<section class="hero">
+
+<h1>🏆 Global Leaderboard</h1>
+
+<p>
+
+See who is the fastest typist.
+
+</p>
+
+</section>
+
+<!-- ==========================
+     TOP 3 PLAYERS
+========================== -->
+
+<section class="top-three">
+
+    <div class="top-card second">
+
+        <div class="medal">🥈</div>
+
+        <h2>Rahul</h2>
+
+        <span>95 WPM</span>
+
+    </div>
+
+    <div class="top-card first">
+
+        <div class="medal">🥇</div>
+
+        <h2>Vishal</h2>
+
+        <span>98 WPM</span>
+
+    </div>
+
+    <div class="top-card third">
+
+        <div class="medal">🥉</div>
+
+        <h2>Aman</h2>
+
+        <span>92 WPM</span>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     SEARCH & FILTER
+========================== -->
+
+<section class="leaderboard-tools">
+
+    <input
+        type="text"
+        id="search-player"
+        placeholder="🔍 Search player...">
+
+    <div class="filters">
+
+        <button class="filter active">
+            Today
+        </button>
+
+        <button class="filter">
+            Weekly
+        </button>
+
+        <button class="filter">
+            All Time
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     TABLE
+========================== -->
+
+<section class="leaderboard-table">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Rank</th>
+
+<th>Player</th>
+
+<th>WPM</th>
+
+<th>Accuracy</th>
+
+</tr>
+
+</thead>
+
+<tbody id="leaderboard-body">
+
+<tr>
+
+<td>🥇 1</td>
+
+<td>Vishal</td>
+
+<td>98</td>
+
+<td>99%</td>
+
+</tr>
+
+<tr>
+
+<td>🥈 2</td>
+
+<td>Rahul</td>
+
+<td>95</td>
+
+<td>98%</td>
+
+</tr>
+
+<tr>
+
+<td>🥉 3</td>
+
+<td>Aman</td>
+
+<td>92</td>
+
+<td>97%</td>
+
+</tr>
+
+<tr>
+
+<td>4</td>
+
+<td>Harshit</td>
+
+<td>88</td>
+
+<td>96%</td>
+
+</tr>
+
+<tr>
+
+<td>5</td>
+
+<td>Rohit</td>
+
+<td>84</td>
+
+<td>95%</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ==========================
+     YOUR RANK
+========================== -->
+
+<section class="your-rank">
+
+    <div class="rank-card">
+
+        <h2>👤 Your Rank</h2>
+
+        <h1 id="your-rank">#4</h1>
+
+        <div class="rank-stats">
+
+            <div>
+                <strong id="your-best-wpm">98</strong>
+                <span>Best WPM</span>
+            </div>
+
+            <div>
+                <strong id="your-accuracy">99%</strong>
+                <span>Accuracy</span>
+            </div>
+
+            <div>
+                <strong id="your-tests">15</strong>
+                <span>Total Tests</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     ACTION BUTTON
+========================== -->
+
+<section class="leaderboard-action">
+
+    <a href="practice.html" class="practice-btn">
+        🚀 Start Practice
+    </a>
+
+</section>
+
+</main>
+
+<script src="js/leaderboard.js"></script>
+
+</body>
+</html>

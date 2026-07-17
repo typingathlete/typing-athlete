@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Typing Athlete | Achievements</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/achievements.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <div class="ta-logo">
+            <span class="t">T</span>
+            <span class="a">A</span>
+        </div>
+
+        <div class="brand-name">
+            <span>TYPING</span>
+            <span>ATHLETE</span>
+        </div>
+
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+        <a href="practice.html">Practice</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="achievements.html" class="active">Achievements</a>
+
+    </nav>
+
+    <div class="user-box">
+
+        <button id="logout-btn">Logout</button>
+
+        <span id="welcome-user">Welcome 👋</span>
+
+    </div>
+
+</header>
+
+<main class="achievements-container">
+
+<section class="page-header">
+
+    <h1>🏆 Achievements</h1>
+
+    <p>
+        Unlock rewards by improving your typing speed and accuracy.
+    </p>
+
+</section>
+
+<section class="achievement-grid">
+
+        <!-- First Test -->
+    <div class="achievement-card unlocked">
+
+        <div class="achievement-icon">🥇</div>
+
+        <h2>First Test</h2>
+
+        <p>Complete your first typing test.</p>
+
+        <span class="reward">+20 XP</span>
+
+    </div>
+
+    <!-- 30 WPM -->
+    <div class="achievement-card locked">
+
+        <div class="achievement-icon">⚡</div>
+
+        <h2>30 WPM</h2>
+
+        <p>Reach 30 Words Per Minute.</p>
+
+        <span class="reward">+50 XP</span>
+
+    </div>
+
+    <!-- 50 WPM -->
+    <div class="achievement-card locked">
+
+        <div class="achievement-icon">🚀</div>
+
+        <h2>50 WPM</h2>
+
+        <p>Reach 50 Words Per Minute.</p>
+
+        <span class="reward">+100 XP</span>
+
+    </div>
+
+    <!-- 80 WPM -->
+    <div class="achievement-card locked">
+
+        <div class="achievement-icon">💎</div>
+
+        <h2>80 WPM</h2>
+
+        <p>Reach 80 Words Per Minute.</p>
+
+        <span class="reward">+250 XP</span>
+
+    </div>
+
+    <!-- 100 WPM -->
+    <div class="achievement-card locked">
+
+        <div class="achievement-icon">👑</div>
+
+        <h2>100 WPM Master</h2>
+
+        <p>Reach 100 Words Per Minute.</p>
+
+        <span class="reward">+500 XP</span>
+
+    </div>
+
+        <!-- 95% Accuracy -->
+    <div class="achievement-card locked">
+
+        <div class="achievement-icon">🎯</div>
+
+        <h2>Accuracy Master</h2>
+
+        <p>Achieve 95% or higher accuracy.</p>
+
+        <span class="reward">+150 XP</span>
+
+    </div>
+
+    <!-- 7 Day Streak -->
+    <div class="achievement-card locked">
+
+        <div class="achievement-icon">🔥</div>
+
+        <h2>7 Day Streak</h2>
+
+        <p>Practice for 7 consecutive days.</p>
+
+        <span class="reward">+200 XP</span>
+
+    </div>
+
+    <!-- 100 Tests -->
+    <div class="achievement-card locked">
+
+        <div class="achievement-icon">🏅</div>
+
+        <h2>100 Tests</h2>
+
+        <p>Complete 100 typing tests.</p>
+
+        <span class="reward">+300 XP</span>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     PROGRESS
+========================== -->
+
+<section class="progress-section">
+
+    <h2>Your Progress</h2>
+
+    <div class="progress-box">
+
+        <div class="progress-bar">
+
+            <div class="progress-fill" id="achievement-progress"></div>
+
+        </div>
+
+        <p>
+            <span id="completed-achievements">1</span> /
+            <span id="total-achievements">8</span>
+            Achievements Unlocked
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     ACTION BUTTONS
+========================== -->
+
+<section class="achievement-actions">
+
+    <a href="dashboard.html" class="secondary-btn">
+        📊 Back to Dashboard
+    </a>
+
+    <a href="practice.html" class="primary-btn">
+        ⌨️ Start Practice
+    </a>
+
+</section>
+
+</main>
+
+<script src="js/achievements.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Typing Athlete | Statistics</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/statistics.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <div class="ta-logo">
+            <span class="t">T</span>
+            <span class="a">A</span>
+        </div>
+
+        <div class="brand-name">
+            <span>TYPING</span>
+            <span>ATHLETE</span>
+        </div>
+
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+        <a href="practice.html">Practice</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="statistics.html" class="active">Statistics</a>
+
+    </nav>
+
+    <div class="user-box">
+
+        <button id="logout-btn">Logout</button>
+
+        <span id="welcome-user">Welcome 👋</span>
+
+    </div>
+
+</header>
+
+<main class="statistics-container">
+
+<section class="page-header">
+
+    <h1>📊 Statistics</h1>
+
+    <p>Track your typing performance and improve every day.</p>
+
+</section>
+
+<section class="stats-grid">
+
+        <div class="stat-card">
+        <h3>🏆 Best WPM</h3>
+        <h2 id="best-wpm">0</h2>
+    </div>
+
+    <div class="stat-card">
+        <h3>🎯 Best Accuracy</h3>
+        <h2 id="best-accuracy">0%</h2>
+    </div>
+
+    <div class="stat-card">
+        <h3>🔥 Total Tests</h3>
+        <h2 id="total-tests">0</h2>
+    </div>
+
+    <div class="stat-card">
+        <h3>⚡ Total XP</h3>
+        <h2 id="total-xp">0 XP</h2>
+    </div>
+
+    <div class="stat-card">
+        <h3>⭐ Current Level</h3>
+        <h2 id="current-level">1</h2>
+    </div>
+
+    <div class="stat-card">
+        <h3>⌨️ Characters Typed</h3>
+        <h2 id="characters-typed">0</h2>
+    </div>
+
+</section>
+
+<!-- ==========================
+     PERFORMANCE SECTION
+========================== -->
+
+<section class="performance-section">
+
+    <h2>📈 Performance Overview</h2>
+
+    <div class="performance-grid">
+
+        <div class="performance-card">
+
+            <h3>Average WPM</h3>
+
+            <h2 id="average-wpm">0</h2>
+
+        </div>
+
+        <div class="performance-card">
+
+            <h3>Average Accuracy</h3>
+
+            <h2 id="average-accuracy">0%</h2>
+
+        </div>
+
+        <div class="performance-card">
+
+            <h3>Total Practice Time</h3>
+
+            <h2 id="practice-time">0 min</h2>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     WEEKLY PROGRESS
+========================== -->
+
+<section class="history-section">
+
+    <h2>📅 Weekly Progress</h2>
+
+    <div class="history-card">
+        <span>Tests This Week</span>
+        <strong id="weekly-tests">0</strong>
+    </div>
+
+    <div class="history-card">
+        <span>Average WPM</span>
+        <strong id="weekly-wpm">0</strong>
+    </div>
+
+    <div class="history-card">
+        <span>Average Accuracy</span>
+        <strong id="weekly-accuracy">0%</strong>
+    </div>
+
+</section>
+
+<!-- ==========================
+     ACTION BUTTONS
+========================== -->
+
+<section class="statistics-actions">
+
+    <a href="dashboard.html" class="secondary-btn">
+        📊 Dashboard
+    </a>
+
+    <a href="practice.html" class="primary-btn">
+        ⌨️ Start Practice
+    </a>
+
+</section>
+
+</main>
+
+<script src="js/statistics.js"></script>
+
+</body>
+</html>

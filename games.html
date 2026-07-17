@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Typing Athlete | Games</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/games.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+
+<div class="ta-logo">
+<span class="t">T</span>
+<span class="a">A</span>
+</div>
+
+<div class="brand-name">
+<span>TYPING</span>
+<span>ATHLETE</span>
+</div>
+
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="practice.html">Practice</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="leaderboard.html">Leaderboard</a>
+<a href="profile.html">Profile</a>
+<a href="games.html" class="active">Games</a>
+
+</nav>
+
+<div class="user-box">
+
+<button id="logout-btn">Logout</button>
+
+<span id="welcome-user">Welcome 👋</span>
+
+</div>
+
+</header>
+
+<main class="games-container">
+
+<section class="page-header">
+
+<h1>🎮 Typing Games</h1>
+
+<p>Choose a game mode and improve your typing skills while having fun.</p>
+
+</section>
+
+<section class="games-grid">
+
+        <!-- Word Rush -->
+
+    <div class="game-card">
+
+        <div class="game-icon">⚡</div>
+
+        <h2>Word Rush</h2>
+
+        <p>
+            Type as many random words as possible before the timer ends.
+        </p>
+
+        <ul>
+            <li>✔ 60 Second Timer</li>
+            <li>✔ Unlimited Words</li>
+            <li>✔ High Score</li>
+        </ul>
+
+        <button class="play-btn" data-mode="wordrush">
+            Play Now
+        </button>
+
+    </div>
+
+    <!-- Time Attack -->
+
+    <div class="game-card">
+
+        <div class="game-icon">⏱️</div>
+
+        <h2>Time Attack</h2>
+
+        <p>
+            Beat the clock and achieve your highest WPM.
+        </p>
+
+        <ul>
+            <li>✔ 30 / 60 / 120 sec</li>
+            <li>✔ Live WPM</li>
+            <li>✔ Accuracy</li>
+        </ul>
+
+        <button class="play-btn" data-mode="timeattack">
+            Play Now
+        </button>
+
+    </div>
+
+    <!-- Survival -->
+
+    <div class="game-card">
+
+        <div class="game-icon">❤️</div>
+
+        <h2>Survival</h2>
+
+        <p>
+            You only have 3 lives. Every mistake costs one life.
+        </p>
+
+        <ul>
+            <li>✔ 3 Lives</li>
+            <li>✔ Endless Mode</li>
+            <li>✔ Game Over</li>
+        </ul>
+
+        <button class="play-btn" data-mode="survival">
+            Play Now
+        </button>
+
+    </div>
+
+    <!-- Zen Mode -->
+
+    <div class="game-card">
+
+        <div class="game-icon">☁️</div>
+
+        <h2>Zen Mode</h2>
+
+        <p>
+            Relax and practice without any timer or pressure.
+        </p>
+
+        <ul>
+            <li>✔ Unlimited Time</li>
+            <li>✔ Stress Free</li>
+            <li>✔ Practice Mode</li>
+        </ul>
+
+        <button class="play-btn" data-mode="zen">
+            Play Now
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     GAME PANEL
+========================== -->
+
+<section class="game-panel">
+
+    <div class="game-info">
+
+        <div class="info-card">
+            <h3>🎯 Score</h3>
+            <h2 id="game-score">0</h2>
+        </div>
+
+        <div class="info-card">
+            <h3>❤️ Lives</h3>
+            <h2 id="game-lives">3</h2>
+        </div>
+
+        <div class="info-card">
+            <h3>⏱ Time</h3>
+            <h2 id="game-timer">60</h2>
+        </div>
+
+    </div>
+
+    <div class="word-box">
+
+        <h2 id="current-word">
+            Press "Play Now" to Start
+        </h2>
+
+    </div>
+
+    <input
+        type="text"
+        id="game-input"
+        placeholder="Type here..."
+        autocomplete="off"
+        disabled
+    >
+
+    <div class="game-buttons">
+
+        <button id="start-game" class="primary-btn">
+            ▶ Start Game
+        </button>
+
+        <button id="restart-game" class="secondary-btn">
+            🔄 Restart
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     HIGH SCORE
+========================== -->
+
+<section class="high-score-section">
+
+    <div class="high-score-card">
+
+        <h2>🏆 High Score</h2>
+
+        <h1 id="high-score">0</h1>
+
+    </div>
+
+</section>
+
+</main>
+
+<script src="js/games.js"></script>
+
+</body>
+</html>
